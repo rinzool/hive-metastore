@@ -34,6 +34,12 @@ spec:
           value: "{{- .Values.postgresql.global.postgresql.auth.username }}"
         - name: DATABASE_PASSWORD
           value: "{{- .Values.postgresql.global.postgresql.auth.password }}"
+        - name: AWS_ACCESS_KEY_ID
+          value: "{{- .Values.aws.access_key_id }}"
+        - name: AWS_SECRET_ACCESS_KEY
+          value: "{{- .Values.aws.secret_access_key }}"
+        - name: AWS_ENDPOINT_URL
+          value: "{{- .Values.aws.endpoint_url }}"
         command:
         - "/bin/sh"
         - "-c"
