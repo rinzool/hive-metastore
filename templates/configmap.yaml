@@ -79,7 +79,7 @@ data:
         <!--Object Store connection Info -->
         <property>
             <name>fs.s3a.connection.ssl.enabled</name>
-            <value>{{ - .Values.objectStore.ssl }}</value>
+            <value>{{- .Values.objectStore.ssl }}</value>
         </property>
 
         <property>
