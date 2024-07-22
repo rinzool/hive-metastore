@@ -79,7 +79,7 @@ data:
         <!--Object Store connection Info -->
         <property>
             <name>fs.s3a.connection.ssl.enabled</name>
-            <value>false</value>
+            <value>{{ - .Values.objectStore.ssl }}</value>
         </property>
 
         <property>
@@ -99,12 +99,12 @@ data:
 
         <property>
             <name>fs.s3a.path.style.access</name>
-            <value>true</value>
+            <value>{{ .Values.objectStore.s3aStyle }}</value>
         </property>
 
         <property>
             <name>fs.s3a.impl</name>
-            <value>org.apache.hadoop.fs.s3a.S3AFileSystem</value>
+            <value>{{ .Values.objectStore.impl }}</value>
         </property>
 
       {{- if index .Values.conf "hiveSite" }}
