@@ -104,7 +104,7 @@ data:
 
         <property>
             <name>fs.s3a.impl</name>
-            <value>{{ .Values.objectStore.impl }}</value>
+            <value>org.apache.hadoop.fs.s3a.S3AFileSystem</value>
         </property>
 
       {{- if index .Values.conf "hiveSite" }}

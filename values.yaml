@@ -18,8 +18,6 @@ postgresql:
     extendedConfiguration: |-
       password_encryption=md5
 
-
-
 # Settings for the hive metastore stateful set
 image:
   repository: sslhep/hive-metastore
@@ -27,12 +25,11 @@ image:
   pullPolicy: IfNotPresent
 
 objectStore:
-  externalURI: 
+  externalURI:
   accessKey:
-  secretKey: 
+  secretKey:
   ssl: false
   s3aStyle: true
-  impl: 'org.apache.hadoop.fs.s3a.S3AFileSystem'
 
 resources: {}
 conf:
